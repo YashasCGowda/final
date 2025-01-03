@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    container_name: paytm_backend
+    volumes:
+      - ./backend:/app/backend
+    environment:
+      - MONGODB_URL=mongodb+srv://yashasgowda:12345@yashasgowda.mtyhqpd.mongodb.net/paytm
+      - PORT=3000
+      - JWT_SECRET=whoareyou
+    ports:
+      - 3000:3000
+  frontend:
+    build: ./frontend
+    container_name: paytm_frontend
+    volumes:
+      - ./frontend:/app/frontend
+    depends_on:
+      - backend
+    ports:
+      - 5173:5173
