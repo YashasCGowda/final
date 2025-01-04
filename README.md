@@ -2,6 +2,7 @@ Features
 User Authentication: Secure login and registration with JWT-based authentication.
 Wallet Management: Add money to the wallet, check balance, and manage transactions.
 Money Transfer: Transfer money to other users within the platform.
+
 Transaction History: View past transactions with detailed information.
 
 Tech Stack
